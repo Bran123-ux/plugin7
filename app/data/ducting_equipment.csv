@@ -1,0 +1,26 @@
+
+id,name,type,description,diameter_mm,price_gbp,category,specifications
+1,Spiral Galvanised Duct 80mm,ducting,Galvanised steel spiral duct,80,18.50,ducting,Length: 1m
+2,Spiral Galvanised Duct 100mm,ducting,Galvanised steel spiral duct,100,22.75,ducting,Length: 1m
+3,Spiral Galvanised Duct 125mm,ducting,Galvanised steel spiral duct,125,28.90,ducting,Length: 1m
+4,Spiral Galvanised Duct 150mm,ducting,Galvanised steel spiral duct,150,34.50,ducting,Length: 1m
+5,Spiral Galvanised Duct 160mm,ducting,Galvanised steel spiral duct,160,38.75,ducting,Length: 1m
+6,Spiral Galvanised Duct 200mm,ducting,Galvanised steel spiral duct,200,48.90,ducting,Length: 1m
+7,Spiral Galvanised Duct 250mm,ducting,Galvanised steel spiral duct,250,68.50,ducting,Length: 1m
+8,Spiral Galvanised Duct 315mm,ducting,Galvanised steel spiral duct,315,89.75,ducting,Length: 1m
+9,Spiral Galvanised Duct 400mm,ducting,Galvanised steel spiral duct,400,125.90,ducting,Length: 1m
+10,Y-Connector 100mm,fitting,Y-branch connector,100,45.75,fittings,Main to branch connection
+11,Y-Connector 125mm,fitting,Y-branch connector,125,52.90,fittings,Main to branch connection
+12,Y-Connector 150mm,fitting,Y-branch connector,150,68.50,fittings,Main to branch connection
+13,Y-Connector 200mm,fitting,Y-branch connector,200,89.75,fittings,Main to branch connection
+14,90° Elbow 100mm,fitting,90 degree bend,100,35.25,fittings,Standard radius bend
+15,90° Elbow 125mm,fitting,90 degree bend,125,42.50,fittings,Standard radius bend
+16,90° Elbow 150mm,fitting,90 degree bend,150,52.75,fittings,Standard radius bend
+17,90° Elbow 200mm,fitting,90 degree bend,200,68.90,fittings,Standard radius bend
+18,Reducer 150-125mm,fitting,Concentric reducer,150,38.50,fittings,Size reduction fitting
+19,Reducer 200-150mm,fitting,Concentric reducer,200,45.75,fittings,Size reduction fitting
+20,Reducer 250-200mm,fitting,Concentric reducer,250,58.90,fittings,Size reduction fitting
+21,Blast Gate 100mm,damper,Manual blast gate,100,85.50,dampers,Flow control damper
+22,Blast Gate 125mm,damper,Manual blast gate,125,92.75,dampers,Flow control damper
+23,Blast Gate 150mm,damper,Manual blast gate,150,105.90,dampers,Flow control damper
+24,Blast Gate 200mm,damper,Manual blast gate,200,125.50,dampers,Flow control damper

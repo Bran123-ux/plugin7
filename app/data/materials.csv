@@ -1,0 +1,9 @@
+
+material_type,display_name,min_velocity_ms,max_velocity_ms,default_flow_m3h,density_kg_m3,description
+wood-chips,Wood Dust Workshop,20,28,500,0.3,Wood chips and sawdust from woodworking operations
+welding-fumes,Welding Grinding Manufacturing,10,15,200,1.2,Welding fumes and grinding particles from metal fabrication
+metalworking,Metalworking Shop,18,25,400,1.0,Metal dust and particles from machining operations
+spray-painting,Spray Painting Booth,12,16,800,1.1,Paint overspray and solvent vapors from spray finishing
+chemical-lab,Chemical Laboratory,15,20,300,1.2,Chemical vapors and fumes from laboratory processes
+garage,Garage (vehicles),16,22,600,1.0,Vehicle exhaust fumes and maintenance dust
+general-dust,General Manufacturing,18,25,400,1.0,General industrial dust and particles

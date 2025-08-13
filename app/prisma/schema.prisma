@@ -1,0 +1,141 @@
+
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+    binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
+    output = "/home/ubuntu/lev_design_system/app/node_modules/.prisma/client"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+// Equipment Categories
+model DuctingProduct {
+  id                String   @id @default(cuid())
+  name              String
+  category          String   // 'spiral-duct', 'reducer', 'bend', 'tee', 'damper', 'silencer'
+  subcategory       String?  // 'fabricated', 'pressed', '90-degree', etc.
+  diameter_mm       Int?     // For ducts: 80-800mm
+  large_diameter_mm Int?     // For reducers
+  small_diameter_mm Int?     // For reducers
+  length_mm         Int?     // Standard lengths
+  angle_degrees     Int?     // For bends
+  material          String   @default("galvanized_steel")
+  standard          String   @default("DW144")
+  unit_price_gbp    Decimal? @db.Decimal(10, 2)
+  weight_kg         Decimal? @db.Decimal(8, 2)
+  pressure_rating   String?
+  description       String?
+  created_at        DateTime @default(now())
+  updated_at        DateTime @updatedAt
+}
+
+model ExtractionEquipment {
+  id                    String   @id @default(cuid())
+  name                  String
+  model                 String
+  category              String   // 'dust_collector', 'fan', 'wet_collector', 'axial_fan'
+  series                String?  // 'WDC-S', 'RPF-H', 'WC', 'F-Series', etc.
+  motor_power_kw        Decimal? @db.Decimal(8, 2)
+  airflow_m3_hr         Int?
+  static_pressure_pa    Int?
+  filtration_area_m2    Decimal? @db.Decimal(8, 2)
+  inlet_diameter_mm     Int?
+  outlet_diameter_mm    Int?
+  dimensions_l_mm       Int?
+  dimensions_w_mm       Int?
+  dimensions_h_mm       Int?
+  weight_kg             Decimal? @db.Decimal(8, 2)
+  waste_capacity_l      Int?
+  water_capacity_l      Int?
+  filter_type           String?  // 'polyester', 'hepa', 'nano_fibre', etc.
+  rpm                   Int?
+  unit_price_gbp        Decimal? @db.Decimal(12, 2)
+  description           String?
+  specifications        Json?    // Additional technical specs
+  created_at            DateTime @default(now())
+  updated_at            DateTime @updatedAt
+}
+
+// Material properties for calculations
+model MaterialProperty {
+  id               String  @id @default(cuid())
+  material_type    String  @unique // 'wood-chips', 'metal-dust', 'welding-fumes', etc.
+  display_name     String
+  min_velocity_ms  Decimal @db.Decimal(5, 2)
+  max_velocity_ms  Decimal @db.Decimal(5, 2)
+  default_flow_m3h Int
+  density_kg_m3    Decimal @db.Decimal(8, 3)
+  description      String?
+  created_at       DateTime @default(now())
+  updated_at       DateTime @updatedAt
+}
+
+// LEV System Projects
+model LEVProject {
+  id          String   @id @default(cuid())
+  name        String
+  client_name String?
+  units       String   @default("metric") // 'metric' or 'imperial'
+  air_density Decimal  @default(1.2) @db.Decimal(5, 3)
+  temperature Decimal  @default(20) @db.Decimal(5, 1)
+  altitude    Int      @default(0)
+  safety_margin Decimal @default(1.1) @db.Decimal(3, 2)
+  project_data Json    // Complete project JSON (components, connections, calculations)
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+  
+  // Relations
+  bom_items   BOMItem[]
+}
+
+// Bill of Materials
+model BOMItem {
+  id              String     @id @default(cuid())
+  project_id      String
+  item_name       String
+  category        String     // 'ducting', 'equipment', 'fitting', 'labor'
+  quantity        Decimal    @db.Decimal(10, 3)
+  unit            String     // 'm', 'ea', 'kg', etc.
+  unit_price_gbp  Decimal    @db.Decimal(10, 2)
+  total_price_gbp Decimal    @db.Decimal(12, 2)
+  specifications  String?
+  notes           String?
+  created_at      DateTime   @default(now())
+  
+  // Relations
+  project         LEVProject @relation(fields: [project_id], references: [id], onDelete: Cascade)
+  
+  @@index([project_id])
+}
+
+// Industry Presets
+model IndustryPreset {
+  id                String @id @default(cuid())
+  name              String
+  industry_type     String // 'woodshop', 'welding', 'metalworking', etc.
+  description       String
+  default_materials Json   // Array of material types commonly used
+  typical_components Json  // Typical component configurations
+  design_guidelines Json   // Design rules and recommendations
+  sample_layout     Json?  // Sample system layout
+  created_at        DateTime @default(now())
+  updated_at        DateTime @updatedAt
+}
+
+// Calculation Templates
+model CalculationTemplate {
+  id          String @id @default(cuid())
+  name        String
+  formula_type String // 'pressure_loss', 'duct_sizing', 'fan_selection'
+  parameters  Json    // Formula parameters and constants
+  formula     String  // Mathematical formula
+  units       Json    // Unit specifications
+  description String?
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+}

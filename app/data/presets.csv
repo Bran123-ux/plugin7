@@ -1,0 +1,8 @@
+
+id,name,description,industry,typical_components
+1,Wood Dust Workshop,Small woodworking shop with table saw and sanders,"[""table-saw"", ""sander"", ""router"", ""dust-collector"", ""fan""]","[{""type"":""table-saw"",""flow"":500,""diameter"":150},{""type"":""sander"",""flow"":400,""diameter"":125},{""type"":""router"",""flow"":300,""diameter"":100}]"
+2,Welding Grinding Manufacturing,Metal fabrication facility with welding and grinding stations,"[""welding-station"", ""grinder"", ""dust-collector"", ""fan""]","[{""type"":""welding-station"",""flow"":200,""diameter"":150},{""type"":""grinder"",""flow"":350,""diameter"":125},{""type"":""cutting-station"",""flow"":400,""diameter"":160}]"
+3,Metalworking Shop,General metalworking with lathes and mills,"[""lathe"", ""mill"", ""grinder"", ""dust-collector"", ""fan""]","[{""type"":""lathe"",""flow"":400,""diameter"":150},{""type"":""mill"",""flow"":350,""diameter"":125},{""type"":""grinder"",""flow"":300,""diameter"":125}]"
+4,Spray Painting Booth,Paint booth for automotive and industrial finishing,"[""spray-booth"", ""prep-station"", ""fan""]","[{""type"":""spray-booth"",""flow"":2000,""diameter"":400},{""type"":""prep-station"",""flow"":800,""diameter"":250}]"
+5,Chemical Laboratory,Laboratory fume extraction system,"[""fume-hood"", ""workstation"", ""fan""]","[{""type"":""fume-hood"",""flow"":1000,""diameter"":250},{""type"":""workstation"",""flow"":300,""diameter"":150}]"
+6,Garage (vehicles),Vehicle maintenance and repair facility,"[""exhaust-hose"", ""workstation"", ""floor-sweep"", ""fan""]","[{""type"":""exhaust-hose"",""flow"":600,""diameter"":200},{""type"":""workstation"",""flow"":400,""diameter"":150},{""type"":""floor-sweep"",""flow"":800,""diameter"":200}]"

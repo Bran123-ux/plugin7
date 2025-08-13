@@ -1,0 +1,26 @@
+
+id,name,type,description,airflow_m3_hr,motor_power_kw,price_gbp,category,specifications
+1,Portable Dust Collector 1500,dust-collector,Portable dust collection unit,1500,1.5,2850.00,dust-collectors,Single phase motor
+2,Portable Dust Collector 3000,dust-collector,Portable dust collection unit,3000,3.0,4250.00,dust-collectors,Three phase motor
+3,Cyclone Collector 5000,dust-collector,Industrial cyclone separator,5000,5.5,6850.00,dust-collectors,High efficiency cyclone
+4,Cyclone Collector 10000,dust-collector,Industrial cyclone separator,10000,11.0,12500.00,dust-collectors,Heavy duty industrial
+5,Centrifugal Fan 2000,fan,Industrial centrifugal fan,2000,2.2,1850.00,fans,Backward curved impeller
+6,Centrifugal Fan 5000,fan,Industrial centrifugal fan,5000,5.5,3250.00,fans,Backward curved impeller
+7,Centrifugal Fan 10000,fan,Industrial centrifugal fan,10000,11.0,5850.00,fans,High pressure capability
+8,Extraction Arm 2m,extraction-arm,Articulated extraction arm,300,0,845.00,extraction-arms,160mm diameter 2m reach
+9,Extraction Arm 3m,extraction-arm,Articulated extraction arm,350,0,985.00,extraction-arms,160mm diameter 3m reach
+10,Extraction Arm 4m,extraction-arm,Articulated extraction arm,400,0,1125.00,extraction-arms,160mm diameter 4m reach
+11,Extraction Arm 5m,extraction-arm,Articulated extraction arm,450,0,1285.00,extraction-arms,160mm diameter 5m reach
+12,Extraction Arm 7m,extraction-arm,Articulated extraction arm,550,0,1685.00,extraction-arms,160mm diameter 7m reach
+13,Extraction Arm 9m,extraction-arm,Articulated extraction arm,650,0,2150.00,extraction-arms,160mm diameter 9m reach
+14,Hose Reel 8m,hose-reel,Retractable hose reel,280,0,685.00,hose-reels,125mm diameter 8m hose
+15,Hose Reel 10m,hose-reel,Retractable hose reel,320,0,785.00,hose-reels,125mm diameter 10m hose
+16,Hose Reel 12m,hose-reel,Retractable hose reel,360,0,925.00,hose-reels,125mm diameter 12m hose
+17,Canopy Hood 0.5x1m,canopy,Rectangular canopy hood,500,0,485.00,canopies,200mm connection
+18,Canopy Hood 1x1m,canopy,Rectangular canopy hood,800,0,685.00,canopies,250mm connection
+19,Canopy Hood 1x1.5m,canopy,Rectangular canopy hood,1000,0,825.00,canopies,300mm connection
+20,Canopy Hood 1x2m,canopy,Rectangular canopy hood,1200,0,985.00,canopies,315mm connection
+21,Canopy Hood 1.5x2m,canopy,Rectangular canopy hood,1500,0,1285.00,canopies,355mm connection
+22,Canopy Hood 2x2m,canopy,Rectangular canopy hood,1800,0,1585.00,canopies,400mm connection
+23,Canopy Hood 1x3m,canopy,Rectangular canopy hood,1800,0,1485.00,canopies,400mm connection
+24,Canopy Hood 1.5x3m,canopy,Rectangular canopy hood,2200,0,1785.00,canopies,450mm connection
